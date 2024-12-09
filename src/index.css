@@ -1,0 +1,43 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    @apply font-sans text-primary-gray antialiased;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-serif;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-gradient-primary text-primary-cream px-6 py-3 rounded-lg 
+           hover:opacity-90 transition transform hover:scale-105 duration-200 
+           font-medium tracking-wide;
+  }
+
+  .card {
+    @apply bg-white p-8 rounded-xl shadow-sm hover:shadow-md transition-shadow 
+           duration-300 border border-gray-100;
+  }
+
+  .section-title {
+    @apply text-4xl font-serif font-bold mb-4 tracking-tight;
+  }
+
+  .section-subtitle {
+    @apply text-xl text-primary-gray/90 max-w-2xl mx-auto;
+  }
+}
+
+.contact-input {
+  @apply w-full rounded-lg border-gray-200 px-4 py-3 text-sm focus:border-primary-gold 
+         focus:ring-primary-gold/20 transition-colors duration-200;
+}
